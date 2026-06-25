@@ -38,6 +38,7 @@ const Login = ({setToken}) => {
         <form onSubmit={onSubmitHandler} className='space-y-5'>
           <div>
             <label className='mb-2 block text-sm font-medium text-slate-300'>Email Address</label>
+            <p className='text-slate-400'>theboysware@gmail.com</p>
             <input
               onChange={(e) => setEmail(e.target.value)}
               value={email}
@@ -47,7 +48,8 @@ const Login = ({setToken}) => {
             />
           </div>
           <div>
-            <label className='mb-2 block text-sm font-medium text-slate-300'>Password</label>
+            <label className='mb-2 block text-sm font-medium text-slate-300'>Password</label> 
+            <p className='text-slate-400'>russell007</p> 
             <input
               onChange={(e) => setPassword(e.target.value)}
               value={password}
