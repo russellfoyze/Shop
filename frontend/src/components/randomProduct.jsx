@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-import React, { useContext, useEffect, useState } from "react";
-=======
 import React, { useContext } from "react";
->>>>>>> 9b83253 (Update frontend)
 import { ShopContext } from "../context/shopContext";
 import ProductItem from "../components/productItem";
 import Title from "../components/title";
 
 const RandomProducts = () => {
   const { products } = useContext(ShopContext);
-<<<<<<< HEAD
-  const [randomTeachers, setRandomTeachers] = useState([]);
-=======
->>>>>>> 9b83253 (Update frontend)
 
-  // Function to shuffle an array (Fisher-Yates algorithm)
   const shuffleArray = (array) => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -24,47 +15,13 @@ const RandomProducts = () => {
     return newArray;
   };
 
-<<<<<<< HEAD
-  useEffect(() => {
-    // Filter products with teacherId or fullName (approved teachers from database)
-    const approvedTeachers = products.filter((item) => item.teacherId || item.fullName);
-    
-    // Shuffle and get random teachers (limit to 8 for display)
-    const shuffled = shuffleArray(approvedTeachers);
-    setRandomTeachers(shuffled.slice(0, 8));
-  }, [products]);
+  const randomProducts = shuffleArray(products).slice(0, 8);
 
   return (
     <div className="py-10">
       <div className="text-center text-3xl py-8">
         <Title text1="Random" text2="Selection" />
-        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-          Discover random teachers from our database
-        </p>
       </div>
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-6 mt-6">
-        {randomTeachers.map((item, index) => (
-          <ProductItem
-            key={item._id || index}
-            id={item._id}
-            image={item.image}
-            profileImageUrl={item.profileImageUrl}
-            fullName={item.fullName}
-            professionalTitle={item.professionalTitle}
-            yearsOfExperience={item.yearsOfExperience}
-            shortDescription={item.shortDescription}
-            specialties={item.specialties}
-            rating={item.rating}
-            totalStudents={item.totalStudents}
-            totalCourses={item.totalCourses}
-            hourlyRate={item.hourlyRate}
-=======
-  // Shuffle the products array to get a random order
-  const randomProducts = shuffleArray(products);
-
-  return (
-    <div className="py-10">
-      <Title text1="Random" text2="Selection" />
       <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 mt-6">
         {randomProducts.map((item) => (
           <ProductItem
@@ -74,7 +31,6 @@ const RandomProducts = () => {
             price={item.price}
             discount={item.discount}
             image={item.image}
->>>>>>> 9b83253 (Update frontend)
           />
         ))}
       </div>

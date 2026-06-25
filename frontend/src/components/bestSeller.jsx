@@ -8,39 +8,24 @@ const bestSeller = () => {
   const [bestSeller, setBestSeller] = useState([]);
 
   useEffect(() => {
-    const bestProduct = products.filter((item) => item.bestTeacher === true);
+    const bestProduct = products.filter((item) => item.bestseller === true);
     setBestSeller(bestProduct.slice(0, 5));
   }, [products]);
 
   return (
     <div className="my-10">
       <div className="text-center text-3xl py-8">
-        <Title text1={"Best"} text2={"Teachers"} />
-        <p className="w3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-    
-        </p>
+        <Title text1={"Best"} text2={"Sellers"} />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 gap-y-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 gap-y-6">
         {bestSeller.map((item, index) => (
           <ProductItem
             key={index}
             id={item._id}
+            name={item.name}
             image={item.image}
-<<<<<<< HEAD
-            profileImageUrl={item.profileImageUrl}
-            fullName={item.fullName}
-            professionalTitle={item.professionalTitle}
-            yearsOfExperience={item.yearsOfExperience}
-            shortDescription={item.shortDescription}
-            specialties={item.specialties}
-            rating={item.rating}
-            totalStudents={item.totalStudents}
-            totalCourses={item.totalCourses}
-            hourlyRate={item.hourlyRate}
-=======
             price={item.price}
             discount={item.discount}
->>>>>>> 9b83253 (Update frontend)
           />
         ))}
       </div>

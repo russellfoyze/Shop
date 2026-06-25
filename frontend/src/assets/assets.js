@@ -54,11 +54,7 @@ import p_img50 from './p_img50.png'
 import p_img51 from './p_img51.png'
 import p_img52 from './p_img52.png'
 
-<<<<<<< HEAD
-import model from './js.jpg'
-=======
 import model from './model.png'
->>>>>>> 9b83253 (Update frontend)
 import bg from './bg.png'
 import wa from './wa.png'
 import logo from './logo.png'
@@ -80,13 +76,8 @@ import razorpay_logo from './razorpay_logo.png'
 import bkash from './bkash.png'
 import cross_icon from './cross_icon.png'
 import home_icon from './home_icon.png'
-<<<<<<< HEAD
-import movie_poster from './hero_img.jpg'
-import anime_poster from './html.jpg'
-=======
 import movie_poster from './movie_poster.jpg'
 import anime_poster from './anime_poster.png'
->>>>>>> 9b83253 (Update frontend)
 
 export const assets = {
     anime_poster,
@@ -714,7 +705,6 @@ export const products = [
     },
     {
         _id: "aaabt",
-        name: "Men Slim Fit Relaxed Denim Jacket",
         name: "Men Slim Fit Relaxed Denim Jacket",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
         price: 320,
