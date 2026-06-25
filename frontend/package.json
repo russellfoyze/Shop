@@ -1,10 +1,6 @@
 {
-  "name": "e-commerce",
-<<<<<<< HEAD
-  "homepage": "https://russellfoyze.github.io/e-commerce",
-=======
+  "name": "shop-saas",
   "homepage": "https://russellfoyze.github.io/",
->>>>>>> 9b83253 (Update frontend)
   "private": true,
   "version": "0.0.0",
   "type": "module",
