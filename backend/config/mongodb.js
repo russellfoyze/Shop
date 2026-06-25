@@ -3,10 +3,23 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
   mongoose.connection.on('connected', () => {
-    console.log("db connected");
+    console.log('MongoDB connected');
   });
- await mongoose.connect(`${process.env.MONGODB_URI}/e-commarce`)
- 
+
+  mongoose.connection.on('error', (err) => {
+    console.error('MongoDB connection error:', err);
+  });
+
+  if (!process.env.MONGODB_URI) {
+    throw new Error('MONGODB_URI is not defined in environment');
+  }
+
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+  } catch (error) {
+    console.error('Failed to connect to MongoDB:', error.message);
+    process.exit(1);
+  }
 };
 
 export default connectDB;

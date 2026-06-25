@@ -3,9 +3,9 @@ import {assets} from '../assets/assets'
 
 const navbar = ({setToken}) => {
   return (
-    <div className='flex items-center py-2 px-[4%] justify-between'>
-      <img className='w-[max(5%,80px)]' src={assets.logo} alt="" />
-      <button onClick={()=>setToken("") } className='bg-gray-600 text-white px-5 py-2 sm:px-7 sm:py-2 rounded-full text-xs sm:text-sm'>Logout</button>
+    <div className='flex items-center justify-between bg-slate-900 px-[4%] py-4 shadow-lg shadow-slate-950/30'>
+      <img className='w-[max(5%,80px)]' src={assets.logo} alt='Admin Logo' />
+      <button onClick={()=>setToken("")} className='rounded-full bg-emerald-500 px-5 py-2 text-xs font-semibold text-slate-950 transition hover:bg-emerald-400 sm:text-sm'>Logout</button>
     </div>
   )
 }
